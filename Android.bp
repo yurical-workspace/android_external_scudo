@@ -148,9 +148,19 @@ cc_defaults {
         },
         android: {
             header_libs: ["bionic_libc_platform_headers"],
+            product_variables: {
+                experimental_mte: {
+                    cflags: ["-DANDROID_EXPERIMENTAL_MTE"],
+                },
+            },
         },
         linux_bionic: {
             header_libs: ["bionic_libc_platform_headers"],
+            product_variables: {
+                experimental_mte: {
+                    cflags: ["-DANDROID_EXPERIMENTAL_MTE"],
+                },
+            },
         },
         native_bridge: {
             cflags: ["-DSCUDO_DISABLE_TBI"],
@@ -218,9 +228,19 @@ cc_test {
     target: {
         android: {
             header_libs: ["bionic_libc_platform_headers"],
+            product_variables: {
+                experimental_mte: {
+                    cflags: ["-DANDROID_EXPERIMENTAL_MTE"],
+                },
+            },
         },
         linux_bionic: {
             header_libs: ["bionic_libc_platform_headers"],
+            product_variables: {
+                experimental_mte: {
+                    cflags: ["-DANDROID_EXPERIMENTAL_MTE"],
+                },
+            },
         },
     },
     test_suites: ["general-tests"],
